@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block internalstyle %} 
+<style>
+
+    .about1{
+    position: absolute;
+    top: 161px;
+    left: 87px;
+    color: #226A80;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    /* margin-bottom: 30px; */
+
+    @media (max-width:1075px){
+        font-size: 30px;
+    }
+
+    }
+
+
+</style>  
+{% endblock internalstyle %}
+
+{% block content %}
+<!-- <div style=" font-size: 44px; font-weight: 600; position: relative; top: 28px;"> -->
+    <div class="about1">
+    This web application is <br> developed by <br> Rejina Dahal, <br> Santosh Shrestha and <br> Lavahang Phago.
+</div>
+
+
+{% endblock content %}

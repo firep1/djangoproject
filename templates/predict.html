@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'predict.css' %}" />
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+  </head>
+  <body> -->
+    {% block title %} Classification Of Diabetes Using MLP-Prediction {% endblock title %}
+
+    {% block css %}
+    {{ block.super }} 
+     "{% static 'predict.css' %}" {% endblock css %}
+
+    {% block content %}
+    <section class="container">
+      <header id="head">Prediction</header>
+      <form action="#" class="form">
+        <div class="column">
+        <div class="input-box">
+          <label id="label">Pregnancies</label>
+          <input type="number" placeholder="Enter Pregnancies value" required />
+        </div>
+
+        <div class="input-box">
+          <label>Glucose</label>
+          <input type="number" placeholder="Enter Glucose value" required />
+        </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Blood Pressure</label>
+            <input type="number" placeholder="Enter Blood Pressure value" required />
+          </div>
+          <div class="input-box">
+            <label>Skin Thickness</label>
+            <input type="number" placeholder="Enter Skin Thickness value" required />
+          </div>
+        </div>
+        <div class="column">
+            <div class="input-box">
+              <label>Insulin</label>
+              <input type="number" placeholder="Enter Insulin value" required />
+            </div>
+            <div class="input-box">
+              <label>BMI</label>
+              <input type="number" placeholder="Enter BMI value" required />
+            </div>
+        </div>
+        <div class="column">
+            <div class="input-box">
+              <label>Diabetes PF</label>
+              <input type="number" placeholder="Enter Diabetes PF value" required />
+            </div>
+            <div class="input-box">
+              <label>Age</label>
+              <input type="number" placeholder="Enter Age value" required />
+            </div>
+          </div>
+        <!-- <button><a style="text-decoration: none; color: aliceblue;" href="nav1.html">GO back</a></button> -->
+        <div class="btn">
+        <button class="btn1" onclick="go()">Go Back</button>
+        <button class="btn2">Submit</button>
+      </div>
+      </form>
+    </section>
+    <script>
+      function go(){
+        window.location.href = "/";
+      }
+    </script>
+     {% endblock content %}
+  </body>
+</html>
+
